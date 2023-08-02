@@ -10,6 +10,9 @@ def service_create(db: Session, gem: GemCreate):
     db.refresh(db_gem)
     return db_gem  
 
+def service_get_gems(db: Session, offset: int, limit: int):
+    return db.query(Gem).offset(offset).limit(limit).all()
+
 def service_get_by_id(db:Session,id:int):
     return db.exec(select(Gem).where(Gem.id == id)).first()
 
@@ -21,3 +24,8 @@ def service_update_gem(db:Session, gem: GemUpdate,db_gem:Gem):
     db.commit()
     db.refresh(db_gem)
     return db_gem
+
+def service_delete(db:Session, db_gem:Gem):
+    db.delete(db_gem)
+    db.commit()
+    return "Deleted :("
