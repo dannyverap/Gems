@@ -1,8 +1,7 @@
 from sqlmodel import SQLModel, Field
 from typing import Optional, List
-from gem_tipes.schema import GemType
+from gem.model import GemType
 from gem_properties.schema import GemPropertiesRead
-
 
 class GemBase(SQLModel):
     price: float
@@ -30,4 +29,4 @@ class GemUpdate(SQLModel):
 
 
 class GemWithProperties(GemRead):
-    gem_properties: Optional[List[GemPropertiesRead]] = None
+    gem_properties: Optional[GemPropertiesRead] = None

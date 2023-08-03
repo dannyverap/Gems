@@ -1,9 +1,9 @@
 from gem.model import Gem
-from gem.schema import GemCreate, GemRead, GemWithProperties, GemUpdate
+from gem.schema import GemCreate, GemUpdate,GemWithProperties
 from sqlmodel import select, Session
 
 
-def service_create(db: Session, gem: GemCreate):
+def service_create(db: Session, gem: GemCreate)-> GemWithProperties:
     db_gem = Gem.from_orm(gem)
     db.add(db_gem)
     db.commit()

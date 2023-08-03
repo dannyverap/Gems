@@ -23,4 +23,4 @@ async def docs():
 
 
 app.include_router(gem_router, prefix="/gem", tags=["Gem"])
-app.include_router(gem_properties_router, prefix="/properties", tags=["Gem"])
+app.include_router(gem_properties_router, prefix="/properties", tags=["Gem Properties"])

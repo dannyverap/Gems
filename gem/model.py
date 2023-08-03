@@ -1,10 +1,14 @@
 from sqlmodel import SQLModel, Field, Relationship
 from typing import Optional,TYPE_CHECKING
-from gem_tipes.schema import GemType
+from enum import Enum
+
 if TYPE_CHECKING:
     from gem_properties.model import GemProperties
 
-
+class GemType(str,Enum):
+    DIAMOND = "DIAMOND"
+    RUBY = "RUBY"
+    EMERALD = "EMERALD"
 
 class Gem(SQLModel, table=True):
     id: Optional[int] = Field(primary_key=True, index=True)

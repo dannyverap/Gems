@@ -1,7 +1,6 @@
-from sqlmodel import SQLModel, Field, Relationship
-from typing import Optional, TYPE_CHECKING
-from gem_tipes.schema import GemClarity, GemColor
-
+from sqlmodel import SQLModel, Field
+from typing import Optional, TYPE_CHECKING, List
+from gem_properties.model import GemClarity, GemColor
 
 class GemPropertiesBase(SQLModel):
     size: float = 1
@@ -9,7 +8,7 @@ class GemPropertiesBase(SQLModel):
     gem_color: Optional[GemColor] = None
 
 class GemPropertiesCreate(GemPropertiesBase):
-    pass 
+    pass
 
 class GemPropertiesRead(GemPropertiesBase):
     id: Optional[int] = Field(primary_key=True)
