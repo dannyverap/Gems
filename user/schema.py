@@ -26,8 +26,10 @@ class UserRead(UserBase):
 
 
 class UserUpdate(SQLModel):
-    username: Optional[str] = None
     email: Optional[EmailStr] = None
     is_seller: Optional[bool] = None
     password: Optional[str] = None
 
+class UserLogin(SQLModel):
+    username: str
+    password: str

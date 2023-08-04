@@ -1,8 +1,8 @@
-"""v2
+"""v1
 
-Revision ID: 4298c831720a
-Revises: 8dd7ef4f23cb
-Create Date: 2023-08-03 21:44:45.930046
+Revision ID: eb6675fb54d9
+Revises: 9c5e50425a00
+Create Date: 2023-08-04 10:55:33.422753
 
 """
 from alembic import op
@@ -11,8 +11,8 @@ import sqlmodel
 
 
 # revision identifiers, used by Alembic.
-revision = '4298c831720a'
-down_revision = '8dd7ef4f23cb'
+revision = 'eb6675fb54d9'
+down_revision = '9c5e50425a00'
 branch_labels = None
 depends_on = None
 

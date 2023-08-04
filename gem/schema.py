@@ -13,10 +13,12 @@ class GemCreate(GemBase):
     gem_properties_id: Optional[int] = Field(
         foreign_key="gemproperties.id", default=None
     )
+    seller_id: int = Field(foreign_key="user.id", default=None)
 
 
 class GemRead(GemBase):
     id: Optional[int] = Field(primary_key=True)
+    seller_id: int = Field(foreign_key="user.id", default=None)
 
 
 class GemUpdate(SQLModel):
@@ -26,6 +28,7 @@ class GemUpdate(SQLModel):
     gem_properties_id: Optional[int] = Field(
         foreign_key="gemproperties.id", default=None
     )
+    seller_id: Optional[int] = Field(foreign_key="user.id", default=None)
 
 
 class GemWithProperties(GemRead):

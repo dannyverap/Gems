@@ -4,6 +4,7 @@ from enum import Enum
 
 if TYPE_CHECKING:
     from gem_properties.model import GemProperties
+    from user.model import User
 
 class GemType(str,Enum):
     DIAMOND = "DIAMOND"
@@ -19,4 +20,6 @@ class Gem(SQLModel, table=True):
     gem_properties_id: Optional[int] = Field(foreign_key="gemproperties.id", default=None)
     gem_properties: Optional["GemProperties"] = Relationship(back_populates="gem")
 
+    seller_id: Optional[int] = Field(foreign_key="user.id", default=None)
+    seller: Optional["User"] = Relationship(back_populates="gems")
 

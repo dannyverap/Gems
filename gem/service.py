@@ -13,6 +13,9 @@ def service_create(db: Session, gem: GemCreate)-> GemWithProperties:
 def service_get_gems(db: Session, offset: int, limit: int):
     return db.query(Gem).offset(offset).limit(limit).all()
 
+def service_get_gems_by_user(db: Session, offset: int, limit: int,user_id:int):
+    return db.query(Gem).filter(Gem.seller_id == user_id).offset(offset).limit(limit).all()
+
 def service_get_by_id(db:Session,id:int):
     return db.exec(select(Gem).where(Gem.id == id)).first()
 
