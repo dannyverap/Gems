@@ -8,10 +8,9 @@ Tecnologías usadas:
 - SQLite3
 - Alembic
 - JWT
+<a href="https://postimg.cc/Snd4QzGv" target="_blank"><img src="https://i.postimg.cc/W4L1nGqT/Repo-1.png" alt="Repo-1"/></a><br/><br/>
+<a href="https://postimg.cc/18sPZKDF" target="_blank"><img src="https://i.postimg.cc/GmspG72X/Repo-2.png" alt="Repo-2"/></a><br/><br/>
+<a href="https://postimg.cc/QHpsPzKs" target="_blank"><img src="https://i.postimg.cc/yYGdJ4VJ/Repo-3.png" alt="Repo-3"/></a><br/><br/>
 
-![image](https://github.com/dannyverap/Gems/assets/23703724/cb0103ee-128b-4b72-b46c-3dcee191cb42)
 
-![image](https://github.com/dannyverap/Gems/assets/23703724/af5068eb-b545-4575-91c5-92fdc82f3a5e)
-
-![image](https://github.com/dannyverap/Gems/assets/23703724/f0ea3b0f-6571-44ad-8291-30f2bc267905)
 
