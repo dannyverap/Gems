@@ -2,6 +2,7 @@ from sqlmodel import SQLModel, Session
 from database import engine
 from gem.model import *
 from gem_properties.model import *
+from user.model import *
 
 session = Session(bind=engine)
 
