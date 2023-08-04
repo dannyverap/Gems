@@ -1,39 +1,17 @@
-activar enviroment
+# "Gems" practice project
 
 
-```bash
-source "c:/Users/danny/OneDrive/Escritorio/Gems/dev-env/Scripts/activate"
-```
+Tecnologías usadas:
 
-Instalar dependencias
-```bash
-pip install -r requirements.txt
-```
+- FastAPI
+- SQLModel
+- SQLite3
+- Alembic
+- JWT
 
-### Para correr el server:
-```bash
-uvicorn main:app --port 5000 --reload
-```
+![image](https://github.com/dannyverap/Gems/assets/23703724/cb0103ee-128b-4b72-b46c-3dcee191cb42)
 
-### Create .env file
-```bash
-cp .env.example .env
-```
+![image](https://github.com/dannyverap/Gems/assets/23703724/af5068eb-b545-4575-91c5-92fdc82f3a5e)
 
-Para crear la base de datos:
- ```bash
- python create_db.py
-  ```
+![image](https://github.com/dannyverap/Gems/assets/23703724/f0ea3b0f-6571-44ad-8291-30f2bc267905)
 
-# Alembic
-
-```bash
-alembic init migrations
-```
-
-Inside the container:
-```bash
-alembic revision --autogenerate -m "init"
-alembic revision --autogenerate -m "create tables"
-alembic upgrade head
-```
